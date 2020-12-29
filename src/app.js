@@ -9,6 +9,7 @@ console.log(path.join(__dirname,'../public'))
 
 //to launch express
 const app = express()
+const port = process.env.PORT || 3000
 
 //Define the paths for Express config
 //to set the public folder path
@@ -114,6 +115,6 @@ app.get('*', (req, res) => {
 })
 
 //to actually listen to the server
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Server is up on port 3000.')
 })
